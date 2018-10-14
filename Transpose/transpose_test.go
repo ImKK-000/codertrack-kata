@@ -1,4 +1,4 @@
-package Transpose_test
+package transpose_test
 
 import (
 	"testing"
@@ -8,16 +8,16 @@ import (
 func TestTransposeInputChordArrayShoudBeTransposeChord(t *testing.T) {
 	expectedTransposeChord := []string{
 		"F#m F#m Bm F#m", "A D Bm D", "F#m Em Em Em", "G G D Em",
-		"F#m G G D", "Bm Bm Em Bm", "D D G A", "D A Em F",
-		"Bm F#m D F#m", "Em D D Bm", "A Bm Em D", "Em Em Bm F",
-		"D F#m D F", "F#m Em A F#m", "F#m A A F#m", "D F#m A Em",
+		"F#m G G D", "Bm Bm Em Bm", "D D G A", "D A Em G",
+		"Bm F#m D F#m", "Em D D Bm", "A Bm Em D", "Em Em Bm G",
+		"D F#m D G", "F#m Em A F#m", "F#m A A F#m", "D F#m A Em",
 		"D F#m F#m F#m", "D A Em D", "A D G Em", "F#m D A A",
 		"A A G A", "Em A F#m F#m", "F#m D F#m Bm", "Bm G D A",
 		"G Bm F#m Bm", "G D D A", "A G F#m F#m", "D G D Bm",
-		"F#m Bm F#m F", "A G A F#m", "D A Bm F#m", "A D G F#m",
-		"A Em Em A", "Em Bm G Bm", "Bm F#m Em A", "A G G F",
-		"F#m Em G F", "A F#m Em F", "F#m Em A Bm", "Em D F#m F",
-		"G Bm A F", "Em Bm F#m F#m", "Em G D F#m", "A D A F#m",
+		"F#m Bm F#m G", "A G A F#m", "D A Bm F#m", "A D G F#m",
+		"A Em Em A", "Em Bm G Bm", "Bm F#m Em A", "A G G G",
+		"F#m Em G G", "A F#m Em G", "F#m Em A Bm", "Em D F#m G",
+		"G Bm A G", "Em Bm F#m F#m", "Em G D F#m", "A D A F#m",
 		"G Em Em Bm", "A D G F#m", "Em Em D Em", "A G F#m Bm",
 		"A G Bm A", "Bm A F#m Em",
 	}
@@ -43,5 +43,16 @@ func TestTransposeInputChordArrayShoudBeTransposeChord(t *testing.T) {
 		if string(expectedTransposeChord[index]) != string(actualTransposeChord[index]) {
 			t.Errorf("expect %v but it got %v", expectedTransposeChord[index], actualTransposeChord[index])
 		}
+	}
+}
+
+func TestTransposeChordInputCAndDmAndEmAndFAndGAndAmShouldBeDAndEmAndFSharpmAndGAndAAndBm(t *testing.T) {
+	expectedChords := "D Em F#m G A Bm"
+	chords := "C Dm Em F G Am"
+
+	actualChords := TransposeChord(chords)
+
+	if expectedChords != actualChords {
+		t.Errorf("expect %v but it got %v", expectedChords, actualChords)
 	}
 }
