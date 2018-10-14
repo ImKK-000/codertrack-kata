@@ -16,7 +16,7 @@ func TestSummationInputSampleArrayShouldBe10(t *testing.T) {
 	}
 }
 
-func TestSummationInputProblemDataArrayShouldBeXXX(t *testing.T) {
+func TestSummationInputProblemDataArrayShouldBe635589218(t *testing.T) {
 	expectedNumber := 635589218
 	inputNumbers := []int{
 		9514490, 824012, 4052382, 5941845, 6758068,
