@@ -13,10 +13,10 @@
 ## Remaining Problem
 
 - [ ] transpose_song
-- [ ] fastest_route
+- [x] fastest_route
 - [ ] social_influencer
 - [ ] social_follower
-- [ ] grading_avg
+- [x] grading_avg
 - [ ] homework_pf
 - [ ] change
 - [ ] topic
