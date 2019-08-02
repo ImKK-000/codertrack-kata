@@ -22,7 +22,7 @@
 - [x] expense_day
 - [x] fastest_route
 - [x] social_influencer
-- [ ] social_follower
+- [x] social_follower
 - [x] couple
 - [x] grading_summary
 - [x] grading_avg
